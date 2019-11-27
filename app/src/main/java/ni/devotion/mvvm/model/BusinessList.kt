@@ -1,6 +1,6 @@
 package ni.devotion.mvvm.model
 
-data class Data(
+data class BusinessList(
     val createdAt: String,
     val descripcion: String,
     val direccion: String,

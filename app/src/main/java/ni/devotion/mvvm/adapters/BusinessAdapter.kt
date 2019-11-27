@@ -3,18 +3,18 @@ package ni.abril.azb.megaboicotapp.ui.adapters
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
-import ni.devotion.mvvm.model.Business
+import ni.devotion.mvvm.model.BusinessList
 import ni.devotion.mvvm.view_holder.BusinessViewHolder
 
-class BusinessAdapter : ListAdapter<Business, BusinessViewHolder>
+class BusinessAdapter : ListAdapter<BusinessList, BusinessViewHolder>
     (DIFF_CALLBACK){
     companion object{
-        private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Business>() {
-            override fun areItemsTheSame(oldItem: Business,
-                                         newItem: Business) =
-                oldItem.data.id== newItem.data.id
-            override fun areContentsTheSame(oldItem: Business,
-                                            newItem: Business) =
+        private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<BusinessList>() {
+            override fun areItemsTheSame(oldItem: BusinessList,
+                                         newItem: BusinessList) =
+                oldItem.id== newItem.id
+            override fun areContentsTheSame(oldItem: BusinessList,
+                                            newItem: BusinessList) =
                 oldItem == newItem
         }
     }

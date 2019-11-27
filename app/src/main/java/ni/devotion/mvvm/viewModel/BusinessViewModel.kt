@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 import ni.devotion.mvvm.R
-import ni.devotion.mvvm.model.Business
+import ni.devotion.mvvm.model.BusinessList
 import ni.devotion.mvvm.repo.BusinessRepository
 
 class BusinessViewModel (private val businessRepository: BusinessRepository): ViewModel() {
@@ -27,15 +27,16 @@ class BusinessViewModel (private val businessRepository: BusinessRepository): Vi
                 }.onSuccess {
                     emitUiState(business = Event(it))
                 }.onFailure {
+                    println(it)
                     emitUiState(error = Event(R.string.internet_failure_error))
                 }
         }
     }
 
-    private fun emitUiState(showProgress: Boolean = false, business: Event<List<Business>>? = null, error: Event<Int>? = null){
+    private fun emitUiState(showProgress: Boolean = false, business: Event<List<BusinessList>>? = null, error: Event<Int>? = null){
         val dataState = BusinessDataState(showProgress, business, error)
         _uiState.value = dataState
     }
 
-    data class BusinessDataState(val showProgress: Boolean, val business: Event<List<Business>>?, val error: Event<Int>?)
+    data class BusinessDataState(val showProgress: Boolean, val business: Event<List<BusinessList>>?, val error: Event<Int>?)
 }

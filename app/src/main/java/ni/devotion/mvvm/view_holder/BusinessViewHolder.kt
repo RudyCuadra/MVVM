@@ -7,15 +7,15 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.business_content.*
 import ni.devotion.mvvm.R
-import ni.devotion.mvvm.model.Business
+import ni.devotion.mvvm.model.BusinessList
 
 class BusinessViewHolder constructor(override val containerView: View) :
     RecyclerView.ViewHolder(containerView), LayoutContainer {
 
-    fun bind(business: Business) {
-        println("Nombre: ${business.data.nombre}")
+    fun bind(business: BusinessList) {
+        println("Nombre: ${business.nombre}")
         //departmentName.text = business.success.toString()
-        departmentName.text = "ESTOOOOOO"
+        departmentName.text = business.nombre
     }
 
     companion object {
