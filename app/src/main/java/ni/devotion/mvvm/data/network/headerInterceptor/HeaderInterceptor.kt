@@ -7,6 +7,7 @@ import okhttp3.Response
 class HeaderInterceptor : Interceptor {
     companion object ApiConstants{
         const val BUSINESS = "/api/v1/negocio"
+        const val CATEGORIES = "/categoria"
     }
 
     private lateinit var requestBuilder: Request.Builder
@@ -16,6 +17,10 @@ class HeaderInterceptor : Interceptor {
         requestBuilder = request.newBuilder()
         when (request.url().url().path) {
             BUSINESS -> {
+                requestBuilder
+                    .addHeader("Content-Type", "application/json")
+            }
+            CATEGORIES -> {
                 requestBuilder
                     .addHeader("Content-Type", "application/json")
             }

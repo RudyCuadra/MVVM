@@ -4,6 +4,7 @@ import ni.devotion.mvvm.data.network.adapters.CoroutineCallAdapterFactory
 import ni.devotion.mvvm.data.network.headerInterceptor.HeaderInterceptor
 import ni.devotion.mvvm.BuildConfig
 import ni.devotion.mvvm.data.network.`interface`.BusinessInterface
+import ni.devotion.mvvm.data.network.`interface`.CategoriesInterface
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module
@@ -12,9 +13,10 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 
-val miUrl = "http://192.168.1.6:3000/"
+val miUrl = "http://10.20.29.14:3000/"
 val remoteDataSourceModule = module {
     single { createOkHttpClient() }
+    single { createWebService<CategoriesInterface>(get(),BuildConfig.API_URL) }
     single { createWebService<BusinessInterface>(get(), BuildConfig.API_URL) }
 }
 

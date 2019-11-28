@@ -16,6 +16,8 @@ class BusinessViewHolder constructor(override val containerView: View) :
         println("Nombre: ${business.nombre}")
         //departmentName.text = business.success.toString()
         departmentName.text = business.nombre
+        departmentDescripcion.text = business.descripcion
+        verMas.text = "Ver más"
     }
 
     companion object {

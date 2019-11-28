@@ -14,7 +14,7 @@ android {
         versionName "1.0"
         multiDexEnabled true
         vectorDrawables.useSupportLibrary true
-        buildConfigField "String", "API_URL", "\"http://192.168.1.6:3000/\""
+        buildConfigField "String", "API_URL", "\"http://10.20.19.13:3000/\""
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     packagingOptions {

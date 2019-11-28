@@ -27,7 +27,7 @@ class BusinessViewModel (private val businessRepository: BusinessRepository): Vi
                 }.onSuccess {
                     emitUiState(business = Event(it))
                 }.onFailure {
-                    println(it)
+                    println("ESTO: $it")
                     emitUiState(error = Event(R.string.internet_failure_error))
                 }
         }
