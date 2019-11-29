@@ -1,6 +1,8 @@
 object Versions {
     const val gradle = "3.5.1"
     const val kotlin = "1.3.50"
+    const val backdrop = "1.0"
+    const val design = "27.0.2"
 
     const val koin = "2.0.1"
     const val navigation = "2.2.0-rc01"
@@ -46,6 +48,14 @@ object Versions {
     const val typeface = "3.0.1.4.original-kotlin@aar"
     const val iconicTypeface = "2.2.0.6-kotlin@aar"
     const val fontAwesomeTypeface = "5.9.0.0-kotlin@aar"
+}
+
+object Design {
+    val androidDesign= "com.android.support:design:${Versions.design}"
+}
+
+object Backdrop {
+    val backdroplayout = "com.github.roiacult:BackdropLayout:${Versions.backdrop}"
 }
 
 object Room {
