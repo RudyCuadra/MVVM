@@ -19,10 +19,11 @@
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp">
 
-        <androidx.appcompat.widget.AppCompatImageView
+        <ImageView
+            android:id="@+id/bussiness_image"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:src="@drawable/lolos"/>
+            android:background="@drawable/imagebusiness"/>
 
         <LinearLayout
             android:layout_width="match_parent"

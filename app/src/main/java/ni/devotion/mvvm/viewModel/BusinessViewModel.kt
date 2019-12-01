@@ -4,8 +4,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import coil.request.Request
 import kotlinx.coroutines.launch
 import ni.devotion.mvvm.R
+import ni.devotion.mvvm.data.network.`interface`.BusinessInterface
 import ni.devotion.mvvm.model.BusinessList
 import ni.devotion.mvvm.repo.BusinessRepository
 
@@ -17,6 +19,7 @@ class BusinessViewModel (private val businessRepository: BusinessRepository): Vi
         println("Pasa por el DEPARTMENTVIEW_MODEL")
         retrieveBusiness()
     }
+
 
     fun retrieveBusiness(){
         println("Pasa por el retrieve Business")

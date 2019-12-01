@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name"></string>
+    <string name="app_name">Guía Vecinos</string>
     <string name="internet_failure_error">Internet connectivity error</string>
 
     <!-- TODO: Remove or change this placeholder text -->

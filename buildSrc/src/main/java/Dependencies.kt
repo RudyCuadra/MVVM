@@ -33,7 +33,7 @@ object Versions {
     const val coroutine = "1.3.1"
     const val coroutineAdapter = "0.9.2"
 
-    const val coil = "0.7.0"
+    const val coil = "0.8.0"
     const val coilTransformation = "0.0.3"
 
     const val room = "1.1.1"

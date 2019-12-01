@@ -71,7 +71,11 @@ dependencies {
     implementation Koin.viewModel
     implementation Koin.extension
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
     kapt Databinding.databinding
+
+    implementation Coil.coil
+    implementation Coil.transformation
 
     implementation Coroutines.coroutine
     implementation Coroutines.coroutineAdapter
